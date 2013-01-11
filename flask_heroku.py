@@ -65,7 +65,7 @@ class Heroku(object):
         mongohq_uri = environ.get('MONGOHQ_URL')
         if mongohq_uri:
             url = urlparse.urlparse(mongohq_uri)
-            self.app.config.setdefault('MONGODB_USER', url.username)
+            self.app.config.setdefault('MONGODB_USERNAME', url.username)
             self.app.config.setdefault('MONGODB_PASSWORD', url.password)
             self.app.config.setdefault('MONGODB_HOST', url.hostname)
             self.app.config.setdefault('MONGODB_PORT', url.port)
